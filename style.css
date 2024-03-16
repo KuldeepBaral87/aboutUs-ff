@@ -1,0 +1,81 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+.bio
+{
+    font-size: 25px;
+    color:white;
+    padding:20px 10px;
+    font-family:Ubuntu;
+}  
+.big-text
+{
+    font-size: 60px;
+    color:gray;
+    font-family:Ubuntu;
+    text-transform: uppercase;
+}
+.magnet
+{
+    position: absolute;
+    bottom:-150px;
+    z-index: -1;
+    transform: rotate(70deg) translateX(-30px);
+}
+
+.cat-hidden
+{
+    left:-100px;
+    /* transform: rotateY(180deg); */
+    transition: all 2s;
+    
+}
+.cat-left
+{
+    transform: translateY(500px) translateX(120vw);
+}
+
+.founderTwo-bio
+{
+    transform: translateY(400px);
+    /* margin-top:400px; */
+    transition: all 0.4s 1s;
+ 
+}
+.founderTwo-bio-top
+{
+    transform: translateY(0px);
+}
+.profile-des
+{
+    background-color: white;
+    width:80%;
+}
+
+.magnetShake
+{
+    animation: magnetshake 0.5s backwards;
+}
+
+@keyframes magnetshake
+{
+    0%, 40%, 80%{
+        transform: rotate(80deg);
+    }
+    20%, 60%, 100%{
+        transform: rotate(60deg);
+
+    }
+}
