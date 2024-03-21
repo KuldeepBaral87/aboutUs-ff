@@ -3,44 +3,112 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
-  html,
-  body {
+    font-family: "Manrope", sans-serif;
+}
+
+html,
+body {
     width: 100%;
     height: 100%;
-  }
-  body{
+   
+    font-size: 20px;
+}
+body{
     overflow-x: hidden;
-  }
+}
 
+.yellow-text
+{
+    color:#FFC817;
+}
+.teamPic-holder
+{
+    background-color: #ffffff;
+    /* background-image: url("src/circle-y.png"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.profile-one
+{
+    border-style: solid;
+    border-width: 32px 34px 35px;
+    /* -moz-border-image: url(/src/frame3.png) 32 34 35 stretch;
+    -webkit-border-image: url(/src/frame3.png) 32 34 35 stretch;
+    -o-border-image: url(/src/frame3.png) 32 34 35 stretch;
+    border-image: url(/src/frame3.png) 32 34 35 stretch; */
+    border-width: 20px 20px 20px 20px;
+/* -moz-border-image: url(/src/frame3.png) 233 257 255 244 stretch; */
+/* -webkit-border-image: url(/src/frame3.png) 233 257 255 244 stretch; */
+/* -o-border-image: url(/src/frame3.png) 233 257 255 244 stretch; */
+/* border-image: url(/src/frame3.png) 233 257 255 244 stretch; */
+    width:70%;
+    margin-inline: auto;
+    /* background-color: #352216; */
+    background-color: #ffcc27;
+    background-image:url("/src/lisa.jpg");
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: inset 5px 20px 10px rgba(0, 0, 0, 0.397);
+}
+.profile-one:nth-child(2)
+{
+    background-image: none;
+}
+.profile-one a{
+    text-decoration: none;
+    
+}
+.profile-one i:hover
+{
+    color:black;
+}
+#founderOne-img
+{
+    transition: all 1s;
+}
+
+.profile-one img
+{
+    filter: drop-shadow(30px 0px 4px #0000004d);
+}
+
+.bio,li
+{
+    font-size: 18px;
+    color:rgb(41, 41, 41);
+    font-family:Manrope;
+    margin-bottom: 0px;
+} 
 .bio
 {
-    font-size: 25px;
-    color:white;
     padding:20px 10px;
-    font-family:Ubuntu;
-}  
+} 
 .big-text
 {
     font-size: 60px;
     color:gray;
-    font-family:Ubuntu;
-    text-transform: uppercase;
+    font-family: "Manrope", sans-serif;
+    /* text-transform: uppercase; */
+    margin-block: 60px;
 }
 .magnet
 {
     position: absolute;
-    bottom:-150px;
-    z-index: -1;
-    transform: rotate(70deg) translateX(-30px);
+    bottom:100px;
+    z-index: 1;
+    left:0px;
+    transform:rotate(223deg);
+    height:200px;
+    width:200px;
 }
 
 .cat-hidden
 {
-    left:-100px;
-    /* transform: rotateY(180deg); */
+    left:-300px;
     transition: all 2s;
-    
 }
 .cat-left
 {
@@ -49,10 +117,9 @@
 
 .founderTwo-bio
 {
-    transform: translateY(400px);
+    transform: translateX(-90vw);
     /* margin-top:400px; */
     transition: all 0.4s 1s;
- 
 }
 .founderTwo-bio-top
 {
@@ -61,21 +128,387 @@
 .profile-des
 {
     background-color: white;
-    width:80%;
+    width:100%;
 }
 
 .magnetShake
 {
-    animation: magnetshake 0.5s backwards;
+    animation: magnetshake 0.5s forwards;
 }
 
 @keyframes magnetshake
 {
     0%, 40%, 80%{
-        transform: rotate(80deg);
+        transform: rotate(237deg);
     }
-    20%, 60%, 100%{
-        transform: rotate(60deg);
+    20%, 60%, 90%{
+        transform: rotate(207deg);
+        left:0%;
+
+    }
+    100%
+    {
+        left:30%;
+    }
+}
+
+.sword1{
+    position: absolute;
+    top:10%;
+    /* transform: translateY(-50%); */
+    background-image: url("/src/katana.png");
+    height: 100%;
+    width: 30%;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    
+}
+
+.sword1-anime
+{
+    animation: rightLeft 1.5s ease-in-out forwards;
+}
+@keyframes rightLeft
+{
+    0%{
+        left: 120%;
+        transform: rotate(0deg);
+    }
+    10%
+    {
+        opacity: 1;
+    }
+    
+    
+    100%
+    {
+        transform: rotate(-360deg);
+left:-50%;
+    }
+}
+.sword1
+{rotate: 45deg;
+margin-left:40px;
+z-index: 3;
+}
+
+.our-team
+{
+    z-index: 5;
+    font-weight: bolder;
+    transform: translateY(3.5px);
+    transition: all 0.8s 0.7s;
+    
+}
+.stroke-style
+{
+position: absolute;
+/* text-stroke: 4px rgb(134, 134, 134); */
+-webkit-text-stroke: 1px rgb(255, 255, 255);
+color:transparent;
+font-size: 80px;
+top:32%;
+left:50%;
+transform: translateX(-50%) translateY(50%);
+z-index: 4;
+font-weight: bolder;
+letter-spacing: -0.1px;
+}
+
+.emp-card
+{
+    box-shadow: 0px 0px 10px 4px rgba(42, 42, 42, 0.141);
+    padding:10px;
+    border-radius: 20px;
+    margin-top: 24px;
+}
+.socials i, .profile-des i
+{
+    font-size: 25px;
+    color:gray;
+    transition:all 0.2s;
+}
+
+.hover-up
+{
+    transform: translatey(-30px);
+}
+
+#section-our-team img
+{
+    position: relative;
+    width:15%;
+    /* left:20%; */
+}
+
+.emp-name-des h6:nth-child(3)
+{
+    color:gray
+}
+
+
+
+.cat-wrapper
+{
+    position: absolute;
+    bottom:-60px;
+    height:100%;
+    width:100%;
+}
+.cats-holder
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height:100%;
+    
+}
+/* experiment for cat cards start*/
+.cats-holder img
+{
+    position: absolute !important;
+    /* border:10px groove white; */
+    border-radius: 20px;
+    left:50%;
+    height:70%;
+    width: 50px;
+    top:20%;
+    transform:translate(-50% -50%) !important;
+    transition: all 0.3s 0.7s;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.61);
+}
+.cats-holder img:nth-child(2)
+{
+    z-index: 2;
+}
+.cats-holder .cards-up:nth-child(1)
+{
+    transform: rotate(-25deg) translateX(-110px) translateY(-30px)!important; 
+}
+.cats-holder .cards-up:nth-child(2)
+{
+    transform: rotate(0deg) translateX(0px) !important; 
+    
+}
+.cats-holder .cards-up:nth-child(3)
+{
+    transform: rotate(25deg) translateX(110px) translateY(-30px) !important; 
+}
+.cards-up 
+{
+    transform: translate(-20px) scale(1.2) !important;
+}
+/* experiment for cat cards end */
+
+
+
+
+#rotating-cat
+{
+    position: absolute;
+    left:120vw;
+    top:10vh;
+    
+}
+
+.make-it-rotate
+{
+    animation: rotatingCat 2s forwards;
+}
+
+@keyframes rotatingCat
+{
+    0%{
+        transform:rotate(0deg);
+    }
+    95%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: rotate(720deg);
+        left:-300px;
+        opacity: 0;
+        display: none;
 
     }
 }
+
+
+#intern-banner
+{
+    overflow: hidden;
+}
+.internCats-holder
+{
+    position: absolute;
+    bottom:-80%;
+    left:50%;
+    transform: translateX(-50%);
+}
+#intern-banner img
+{
+    position: relative;
+    width:30%;
+    bottom:-40px;
+}
+#cat-walk
+{
+    position: absolute !important;
+    left:20%;
+    bottom:0px !important;
+    
+
+}
+
+
+/* gallery code start */
+
+.section-gallery{ padding-top:30px;}
+.section-gallery .fotorama-thumbs {
+ 
+  display: none;
+}
+
+.img-grid-gallery {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 1840px;
+  margin: 0 auto;
+}
+
+.img-grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.img-grid-item.bytwo {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 25.64457%;
+  flex: 0 25.64457%;
+  min-width: 0;
+}
+
+.img-grid-item.byone {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 33.52500%;
+  flex: 0 33.52500%;
+  min-width: 0;
+}
+
+.img-grid-item.byfour {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 37.35218%;
+  flex: 0 37.35218%;
+  min-width: 0;
+}
+
+.img-grid-inner {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.img-grid-inner > .large {
+  width: 67.00143%;
+}
+
+.img-grid-inner > .small {
+  width: 28.40746%;
+}
+
+.img-grid-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-grid-item a {
+  display: inline-block;
+  position: relative;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 24px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+}
+
+.img-grid-item a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(216, 216, 216, 0.65);
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  content: " ";
+  display: block;
+  opacity: 0;
+  z-index: 1;
+}
+
+.img-grid-item a::after {
+  content: "\f00e";
+  color: #1d1d1b;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.img-grid-item a:hover::after,
+.img-grid-item a:hover::before {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-grid-item a {
+    font-size: 48px;
+  }
+}
+
+.fotorama--fullscreen,
+.fotorama-overlay {
+  background-color: rgba(29, 29, 27, 0.9);
+}
+
+.fullscreen,
+.fotorama--fullscreen .fotorama__stage,
+.fotorama--fullscreen .fotorama__nav{
+  background-color:transparent;
+}
+/* straight “close” icon instead of “cancel fullscreen” */
+
+.fotorama--fullscreen .fotorama__fullscreen-icon {
+  background-position: -64px 0;
+}
+
+/* gallery code end */
